@@ -1,0 +1,271 @@
+:root {
+   --softorange: hsl(35, 77%, 62%);
+   --softred: hsl(5, 85%, 63%);
+   --off-white: hsl(36, 100%, 99%);
+   --grayishblue: hsl(233, 8%, 79%);
+   --darkgrayishblue: hsl(236, 13%, 42%);
+   --verydarkblue: hsl(240, 100%, 5%);
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   list-style: none;
+   text-decoration: none;
+   scroll-behavior: smooth;
+}
+
+img {
+   max-width: 100%;
+}
+
+.container {
+   max-width: 1140px;
+   margin: 0 auto;
+   padding: 0 20px;
+   overflow: hidden;
+}
+
+/* NAV START*/
+
+nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 100px;
+}
+
+.nav-links {
+   display: flex;
+   align-items: center;
+   gap: 3vw;
+}
+
+.nav-link a {
+   color: var(--darkgrayishblue);
+}
+
+.nav-link a:hover {
+   color: var(--softorange);
+}
+
+.menu-icon {
+   display: none;
+}
+
+.menu-dropdown {
+   display: none;
+}
+
+.menu-dropdown.active {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.315);
+}
+
+.nav-links-dropdown {
+   background-color: white;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   width: 70%;
+   padding: 100px 40px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.nav-link-dropdown a {
+   font-size: 20px;
+   color: var(--verydarkblue);
+}
+
+/* NAV END*/
+
+/* HEADER START */
+
+header {
+   display: flex;
+   align-items: self-start;
+   justify-content: space-between;
+   gap: 20px;
+}
+
+.hero {
+   width: 70%;
+}
+
+.hero-content {
+   margin: 20px 0;
+   display: flex;
+   gap: 20px;
+   align-items: center;
+}
+
+.hero-content-title {
+   color: var(--verydarkblue);
+   font-weight: bold;
+   font-size: 60px;
+   line-height: 55px;
+   width: max-content;
+}
+
+.hero-content-main {
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+   align-items: start;
+}
+
+.hero-content-main p {
+   color: var(--darkgrayishblue);
+   line-height: 25px;
+}
+
+.hero-content-main button {
+   padding: 12px 24px;
+   background-color: var(--softred);
+   outline: none;
+   border: none;
+   color: white;
+   letter-spacing: 2px;
+   cursor: pointer;
+}
+
+.hero-content-main button:hover {
+   padding: 12px 24px;
+   background-color: var(--verydarkblue);
+   outline: none;
+   border: none;
+   color: white;
+   letter-spacing: 2px;
+   cursor: pointer;
+}
+
+.news {
+   background-color: var(--verydarkblue);
+   padding: 30px 20px;
+   color: white;
+}
+
+.news-title {
+   color: var(--softorange);
+   margin-bottom: 20px;
+}
+
+.news-content {
+   margin-bottom: 30px;
+}
+
+.news-content h3 {
+   margin-bottom: 10px;
+   cursor: pointer;
+}
+
+.news-content h3:hover {
+   color: var(--softorange);
+}
+
+.news-content p {
+   color: var(--grayishblue);
+   margin-bottom: 20px;
+}
+
+/* HEADER END */
+
+/* SECTION ARTICLES START */
+
+.articles {
+   margin: 50px 0;
+   display: grid;
+   gap: 20px;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.article-card {
+   display: flex;
+   align-items: center;
+   gap: 30px;
+}
+
+.article-card-image {
+   width: 200px;
+}
+
+.article-card-content h1 {
+   font-size: 30px;
+   color: var(--grayishblue);
+   margin-bottom: 10px;
+}
+
+.article-card-content h4 {
+   margin-bottom: 10px;
+   color: var(--verydarkblue);
+}
+
+.article-card-content h4:hover {
+   color: var(--softred);
+   cursor: pointer;
+}
+
+.article-card-content p {
+   margin-bottom: 10px;
+   color: var(--darkgrayishblue);
+}
+
+/* SECTION ARTICLES END */
+
+@media (max-width: 660px) {
+   .nav-links {
+      display: none;
+   }
+
+   .menu-icon {
+      display: block;
+   }
+
+   .menu-icon-close {
+      display: block;
+      position: fixed;
+      top: 30px;
+      right: 20px;
+      z-index: 10;
+   }
+
+   .menu-dropdown.active {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.315);
+   }
+
+   header {
+      display: block;
+      align-items: self-start;
+      justify-content: space-between;
+      gap: 20px;
+   }
+
+   .hero {
+      width: 100%;
+   }
+
+   .hero-content {
+      margin-bottom: 50px;
+      display: block;
+   }
+
+   .hero-content-title {
+      width: 100%;
+      margin-bottom: 20px;
+   }
+}
